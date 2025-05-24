@@ -10,17 +10,18 @@
       padding: 0;
       background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
       font-family: 'Helvetica Neue', sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
       color: #f0f0f0;
     }
     .container {
       position: relative;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 1;
+      padding-bottom: 100px;
     }
     h1 {
       font-size: 2.8em;
@@ -83,6 +84,15 @@
       opacity: 0.05;
       z-index: 0;
     }
+    iframe {
+      margin-top: 50px;
+      width: 100%;
+      max-width: 900px;
+      height: 650px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -99,10 +109,13 @@
     <div id="chatBox">
       <p><strong>SmartHost AI :</strong> Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
     </div>
-  </div>
 
-  <!-- ChatGPT Assistant intégré -->
-  <script src="https://chat.openai.com/embed/g-68320e61df808191b032066284e4af4a"></script>
+    <!-- Assistant IA intégré via iframe -->
+    <iframe 
+      src="https://chat.openai.com/g/g-68320e61df808191b032066284e4af4a-smarthost-ai-concierge" 
+      title="Assistant IA SmartHost">
+    </iframe>
+  </div>
 
   <script>
     function startChat(voice) {
