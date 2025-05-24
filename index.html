@@ -3,29 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartHost AI</title>
+  <title>SmartHost AI - Luxe</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; text-align: center; }
-    .container { margin-top: 50px; }
-    h1 { color: #2c3e50; }
-    .voice-choice { margin: 20px 0; }
-    button { padding: 15px 30px; font-size: 16px; margin: 10px; border-radius: 10px; border: none; cursor: pointer; }
-    .male { background: #3498db; color: white; }
-    .female { background: #e91e63; color: white; }
-    #chatBox { display: none; margin-top: 30px; padding: 20px; background: white; border-radius: 10px; max-width: 600px; margin-left: auto; margin-right: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      color: #f8f8f8;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-align: center;
+    }
+    .container {
+      padding: 60px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    .voice-choice {
+      margin-top: 30px;
+    }
+    button {
+      padding: 15px 35px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 30px;
+      border: 2px solid #d4af37;
+      background-color: transparent;
+      color: #d4af37;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #d4af37;
+      color: #0f0f0f;
+    }
+    #chatBox {
+      display: none;
+      margin-top: 40px;
+      padding: 20px;
+      background: #1c1c1c;
+      border-radius: 15px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bienvenue à la Bastide des Candeliers</h1>
-    <p>Souhaitez-vous interagir avec une voix masculine ou féminine ?</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Luxury_icon_gold.png" alt="logo" class="logo">
+    <h1>SmartHost AI</h1>
+    <p>Bienvenue à la Bastide des Candeliers</p>
+    <p>Choisissez votre assistant vocal</p>
     <div class="voice-choice">
-      <button class="male" onclick="startChat('masculine')">Voix Masculine</button>
-      <button class="female" onclick="startChat('feminine')">Voix Féminine</button>
+      <button onclick="startChat('masculine')">Voix Masculine</button>
+      <button onclick="startChat('feminine')">Voix Féminine</button>
     </div>
     <div id="chatBox">
       <p><strong>SmartHost AI :</strong> Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
-      <p><em>(Simulation d'interaction en cours... voix réelle intégrée dans la version finale)</em></p>
+      <p><em>(Démo vocale en cours... version audio dans la prochaine étape)</em></p>
     </div>
   </div>
   <script>
