@@ -76,10 +76,12 @@
       <p><em>(Démo vocale en cours... version audio dans la prochaine étape)</em></p>
     </div>
   </div>
- <script>
+<script>
   function startChat(voice) {
+    // Affiche la boîte de chat
     document.getElementById('chatBox').style.display = 'block';
 
+    // Détermine le bon fichier audio selon la voix choisie
     let audioUrl = "";
 
     if (voice === 'feminine') {
@@ -88,12 +90,17 @@
       audioUrl = "https://evanosmart.github.io/Smarthost-ai/audio/bill.mp3";
     }
 
+    // Si l'URL est définie, joue le son
     if (audioUrl) {
-      const audio = new Audio(audioUrl);
-      audio.play();
+      let audio = new Audio(audioUrl);
+      audio.play().catch(function(error) {
+        console.error("Erreur de lecture audio :", error);
+        alert("Impossible de jouer la voix. Vérifiez si le son est activé.");
+      });
     }
   }
 </script>
+
 
   </script>
 </body>
