@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHost AI</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; text-align: center; }
+    .container { margin-top: 50px; }
+    h1 { color: #2c3e50; }
+    .voice-choice { margin: 20px 0; }
+    button { padding: 15px 30px; font-size: 16px; margin: 10px; border-radius: 10px; border: none; cursor: pointer; }
+    .male { background: #3498db; color: white; }
+    .female { background: #e91e63; color: white; }
+    #chatBox { display: none; margin-top: 30px; padding: 20px; background: white; border-radius: 10px; max-width: 600px; margin-left: auto; margin-right: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenue à la Bastide des Candeliers</h1>
+    <p>Souhaitez-vous interagir avec une voix masculine ou féminine ?</p>
+    <div class="voice-choice">
+      <button class="male" onclick="startChat('masculine')">Voix Masculine</button>
+      <button class="female" onclick="startChat('feminine')">Voix Féminine</button>
+    </div>
+    <div id="chatBox">
+      <p><strong>SmartHost AI :</strong> Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
+      <p><em>(Simulation d'interaction en cours... voix réelle intégrée dans la version finale)</em></p>
+    </div>
+  </div>
+  <script>
+    function startChat(voice) {
+      document.getElementById('chatBox').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
