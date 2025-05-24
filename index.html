@@ -76,10 +76,25 @@
       <p><em>(Démo vocale en cours... version audio dans la prochaine étape)</em></p>
     </div>
   </div>
-  <script>
-    function startChat(voice) {
-      document.getElementById('chatBox').style.display = 'block';
+ <script>
+  function startChat(voice) {
+    document.getElementById('chatBox').style.display = 'block';
+
+    let audioUrl = "";
+
+    if (voice === 'feminine') {
+      audioUrl = "https://evanosmart.github.io/Smarthost-ai/audio/ivanna.mp3";
+    } else if (voice === 'masculine') {
+      audioUrl = "https://evanosmart.github.io/Smarthost-ai/audio/bill.mp3";
     }
+
+    if (audioUrl) {
+      const audio = new Audio(audioUrl);
+      audio.play();
+    }
+  }
+</script>
+
   </script>
 </body>
 </html>
